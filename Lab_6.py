@@ -1,3 +1,4 @@
+# Original file: Christian Domingo
 def encoder(password):
     encoded_password = ""
     temp_list = list(password)
