@@ -5,9 +5,9 @@ def encoder(password):
     for i in range(len(temp_list)):
         if temp_list[i] == "7":
             encoded_password += "0"
-        if temp_list[i] == "8":
+        elif temp_list[i] == "8":
             encoded_password += "1"
-        if temp_list[i] == "9":
+        elif temp_list[i] == "9":
             encoded_password += "2"
         else:
             encoded_password += str(int(temp_list[i]) + 3)
@@ -33,7 +33,7 @@ if __name__ == '__main__':
         #Option 2 added by Yiqiao (Emily) Huang
         if menu_option == 2:
             decoded_password = decoder(encoded_password)
-            print(f"Your encoded password is {encoded_password}, and the original password is {decoded_password}")
+            print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}")
             print()
         #Option 3 added by Yiqiao (Emily Huang
         if menu_option == 3:
