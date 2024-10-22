@@ -20,8 +20,7 @@ def decoder(password_to_decode):
         decoded_pass_list.append(str((int(letter) - 3 + 10) % 10))
     return "".join(decoded_pass_list)
 
-
-if __name__ == '__main__':
+def main():
     is_running = True
     while is_running:
         print("Menu \n------------- \n1. Encode \n2. Decode \n3. Quit \n")
@@ -30,14 +29,15 @@ if __name__ == '__main__':
             password = str(input("Please enter your password to encode: "))
             encoded_password = encoder(password)
             print("Your password has been encoded and stored!\n")
-        #Option 2 added by Yiqiao (Emily) Huang
+        # Option 2 added by Yiqiao (Emily) Huang
         if menu_option == 2:
             decoded_password = decoder(encoded_password)
             print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}")
             print()
-        #Option 3 added by Yiqiao (Emily Huang
+        # Option 3 added by Yiqiao (Emily Huang
         if menu_option == 3:
             is_running = False
 
 
-
+if __name__ == '__main__':
+    main()
